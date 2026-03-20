@@ -1,0 +1,144 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BASE */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: radial-gradient(circle at top, #0f172a, #020617);
+    color: #e2e8f0;
+    line-height: 1.6;
+}
+
+/* HEADER (MENU FIXO) */
+header {
+    padding: 20px 60px;
+    background: rgba(15, 23, 42, 0.7);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(56, 189, 248, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/* CONTAINER PRINCIPAL (AGORA LADO A LADO) */
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* TEXTO À ESQUERDA */
+.header-texto {
+    max-width: 60%;
+    text-align: left;
+}
+
+/* NOME */
+header h1 {
+    font-size: 1.8rem;
+    color: #38bdf8;
+    text-shadow: 0 0 10px #38bdf8, 0 0 20px #0ea5e9;
+}
+
+/* FOTO À DIREITA */
+.foto-perfil {
+    width: 10cm;
+    height: 10cm;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid rgba(56, 189, 248, 0.4);
+}
+
+/* MENU */
+nav ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: #cbd5e1;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* LINHA ANIMADA */
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background: #38bdf8;
+    transition: width 0.3s ease;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* MAIN */
+main {
+    padding: 60px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* SEÇÕES */
+section {
+    margin-bottom: 60px;
+    padding: 30px;
+    border-radius: 15px;
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(56, 189, 248, 0.15);
+    box-shadow: 0 0 30px rgba(56, 189, 248, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 40px rgba(56, 189, 248, 0.2);
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .header-texto {
+        max-width: 100%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main {
+        padding: 30px 20px;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    .foto-perfil {
+        width: 140px;
+        height: 140px;
+    }
+}
