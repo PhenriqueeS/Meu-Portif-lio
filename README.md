@@ -45,7 +45,7 @@ A proposta é simular um formulário real, aplicando conceitos essenciais de fro
 
 ```bash id="c7y91x"
 # Clone este repositório
-git clone https://github.com/seu-usuario/seu-repositorio.git
+git clone https://github.com/PheenriqueS/meu-portfolio.git
 ```
 
 ```bash id="k92md1"
